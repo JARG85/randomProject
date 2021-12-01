@@ -1,0 +1,59 @@
+h1{
+    text-align: center;
+}
+
+.contenedor{
+    display: grid;
+    text-align: center;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+    grid-template-columns:repeat(4,1fr);
+    grid-template-rows: repeat(2, auto);
+    grid-template-areas: 
+    "graficoCirculo graficoCirculo graficoBarras graficoBarras "
+    "graficoCirculo graficoCirculo graficoBarras graficoBarras ";
+}
+
+.graficoCirculo{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+    grid-area: graficoCirculo;
+    
+}
+
+.graficoBarras{
+    display: flex;
+    text-align: center;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+    grid-area: graficoBarras;
+}
+
+.sizeShape{
+    width: 400px;
+}
+
+.sizeShape2{
+    width: 450px;
+    
+}
+
+@media screen and (max-width: 768px){
+    .contenedor{
+        grid-template-areas: 
+        "graficoCirculo graficoCirculo graficoCirculo graficoCirculo"
+        "graficoBarras graficoBarras graficoBarras graficoBarras";
+    }
+    .sizeShape{
+        width: 280px;
+    }
+    .sizeShape2{
+        width: 400px;
+    }
+}
